@@ -1,0 +1,30 @@
+{
+    "name" : "cimus/IpGeoBase",
+    "description" : "Symfony CimusGearmanBundle",
+    "version" : "1.0.0",
+    "type" : "ipGeoBase",
+    "homepage": "https://github.com/Cimus/ipGeoBase",
+    "license" : "MIT",
+    "keywords" : ["ip Geo Base", "ipGeoBase"],
+    "authors" : [{
+        "name" : "Sergey Ageev (Cimus)",
+        "email" : "s_ageev@mail.ru"
+    }],
+    "require" : {
+        "php": ">=5.5.0"
+    },
+    "autoload" : {
+        "psr-4" : { "Cimus\\IpGeoBase\\" : "" }
+    },
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.0.x-dev"
+        },
+        "minimum-stability": "dev"
+    }
+    
+}
+
+
+
+
