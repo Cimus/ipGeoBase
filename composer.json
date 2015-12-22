@@ -16,7 +16,6 @@
     "autoload" : {
         "psr-4" : { "Cimus\\IpGeoBase\\" : "" }
     },
-    "target-dir": "Cimus/IpGeoBase",
     "extra" : {
         "branch-alias" : {
             "dev-master" : "1.0.x-dev"
