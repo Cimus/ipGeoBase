@@ -1,6 +1,6 @@
 {
     "name" : "cimus/ip-geo-base",
-    "description" : "Symfony CimusGearmanBundle",
+    "description" : "IpGeoBase",
     "version" : "1.0.0",
     "type" : "ipGeoBase",
     "homepage": "https://github.com/Cimus/ipGeoBase",
