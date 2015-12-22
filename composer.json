@@ -11,11 +11,12 @@
         "email" : "s_ageev@mail.ru"
     }],
     "require" : {
-        "php": ">=5.5.0"
+        "php": "5.3.9|~7.0"
     },
     "autoload" : {
         "psr-4" : { "Cimus\\IpGeoBase\\" : "" }
     },
+    "target-dir": "Cimus/IpGeoBase",
     "extra" : {
         "branch-alias" : {
             "dev-master" : "1.0.x-dev"
