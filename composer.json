@@ -11,7 +11,7 @@
         "email" : "s_ageev@mail.ru"
     }],
     "require" : {
-        "php": "5.3.9|~7.0"
+        "php": ">=5.3.0"
     },
     "autoload" : {
         "psr-4" : { "Cimus\\IpGeoBase\\" : "" }
