@@ -49,6 +49,7 @@ require_once 'IpGeoBase.php';
 
 use cimus\IpGeoBase\IpGeoBase;
 
+$path = __DIR__ . '/DB';
 $search = new IpGeoBase($path);
 $info =  $search->search('176.121.128.1');
 ````
