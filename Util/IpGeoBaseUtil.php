@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace cimus\IpGeoBase\Util;
+namespace Cimus\IpGeoBase\Util;
 
 /**
  * @author Sergey Ageev (Cimus <s_ageev@mail.ru>)

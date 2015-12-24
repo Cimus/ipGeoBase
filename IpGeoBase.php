@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace cimus\IpGeoBase;
+namespace Cimus\IpGeoBase;
 
 /**
  *

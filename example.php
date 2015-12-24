@@ -27,8 +27,8 @@
 require_once 'Util/IpGeoBaseUtil.php';
 require_once 'IpGeoBase.php';
 
-use cimus\IpGeoBase\Util\IpGeoBaseUtil;
-use cimus\IpGeoBase\IpGeoBase;
+use Cimus\IpGeoBase\Util\IpGeoBaseUtil;
+use Cimus\IpGeoBase\IpGeoBase;
 
 $path = __DIR__ . '/DB';
 
