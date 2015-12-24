@@ -19,7 +19,7 @@ $ php composer.phar require cimus/ip-geo-base
 ```json
 {
     "require" : {
-        "cimus/ip-geo-base": "dev-master"
+        "cimus/ip-geo-base": "^1.0"
     },
 }
 ```
