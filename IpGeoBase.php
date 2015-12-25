@@ -116,7 +116,7 @@ class IpGeoBase
     {
         $offset = $this->meta['maxLenBlockIps'] * $this->meta['countIpBlock'] + $this->meta['maxLenBlockCities'] * $citiNum - $this->meta['maxLenBlockCities'];
         fseek($this->handle, $offset);
-        $bufer = fread($this->handle, $this->meta['maxLenBlockCities']);
+        $bufer = rtrim(fread($this->handle, $this->meta['maxLenBlockCities']));
         
         return explode(chr(0), $bufer);
     }
