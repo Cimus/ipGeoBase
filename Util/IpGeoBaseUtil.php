@@ -149,7 +149,7 @@ class IpGeoBaseUtil
      */
     private function packIps($ipBlocks, $handle)
     {
-        foreach($ipBlocks as $item){print_r($item);
+        foreach($ipBlocks as $item){
             fwrite($handle, 
                 $this->packIp($item['start']) . 
                 $this->packIp($item['stop']) .
