@@ -1,7 +1,7 @@
 {
     "name" : "cimus/ip-geo-base",
     "description" : "IpGeoBase",
-    "version" : "1.0.3",
+    "version" : "v1.0.4",
     "type" : "ipGeoBase",
     "homepage": "https://github.com/Cimus/ipGeoBase",
     "license" : "MIT",
