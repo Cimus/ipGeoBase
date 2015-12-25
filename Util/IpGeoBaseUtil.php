@@ -149,7 +149,7 @@ class IpGeoBaseUtil
      */
     private function packIps($ipBlocks, $handle)
     {
-        foreach($ipBlocks as $item){
+        foreach($ipBlocks as $item){print_r($item);
             fwrite($handle, 
                 $this->packIp($item['start']) . 
                 $this->packIp($item['stop']) .
@@ -189,6 +189,29 @@ class IpGeoBaseUtil
      */
     private function normalizeIpAndCities(&$ipBlocks, &$cities)
     {
+        //Удаляем города которые отсутсвуют в блоках с IP адресами
+        foreach($ipBlocks as &$block){
+            if(array_key_exists($block['cityId'], $cities)){
+                $citiesTmp[$block['cityId']] = $cities[$block['cityId']];
+            }
+        }
+        
+        $cities = $citiesTmp;
+        unset($citiesTmp);
+        
+        //Проставляем реальные порядковые номера блокам с адресами
+        $i = 1;
+        $cities[0]['realId'] = $i;
+        
+        foreach($cities as $id => &$item){
+            if($id){
+                $i++;
+                $item['realId'] = $i;
+            }
+        }
+        // ==== //
+        
+        
         foreach($ipBlocks as &$block){
             $cities[$block['cityId']]['country'] = $block['country'];
             $block['cityId'] = $cities[$block['cityId']]['realId'];
@@ -255,9 +278,7 @@ class IpGeoBaseUtil
     {
         $handle = fopen($path . '/cities.txt', 'r');
         
-        $i = 1;
         $cities[0] = [
-            'realId' => $i,
             'country' => 'unknown',
             'city' => 'unknown',
             'region' => 'unknown',
@@ -269,9 +290,7 @@ class IpGeoBaseUtil
         if($handle){
             while(($buffer = fgets($handle, 4096)) !== false){
                 $t = array_map('trim', explode("\t", $buffer));
-                $i++;
                 $cities[$t[0]] = [
-                    'realId' => $i,
                     'country' => 'unknown',
                     'city' => $t[1],
                     'region' => $t[2],

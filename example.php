@@ -42,7 +42,12 @@ $path = __DIR__ . '/DB';
 
 
 
-$search = new IpGeoBase($path);
-$info =  $search->search('176.121.128.1');
+$ipGeoBase = new IpGeoBase($path);
+$info =  $ipGeoBase->search('176.121.128.1');
 
 print_r($info);
+
+//Выводит список всех городов
+//$cities = $ipGeoBase->listCity();
+//
+//print_r($cities);

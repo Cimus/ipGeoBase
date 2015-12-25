@@ -83,7 +83,6 @@ class IpGeoBase
      */
     public function search($ip)
     {
-        
         $block = $this->searchIpBlock($ip);
         
         if($block){
@@ -106,6 +105,36 @@ class IpGeoBase
         
         return null;
     }
+    /**
+     * Возвращает массив городов о которых есть информация в БД
+     * 
+     * @return array
+     */
+    public function listCity()
+    {
+        $offset = $this->meta['maxLenBlockIps'] * $this->meta['countIpBlock'];
+        fseek($this->handle, $offset);
+        
+        $list = [];
+        
+        for($i = 1; $i <= $this->meta['countCitiesBlock']; $i++){
+            $bufer = rtrim(fread($this->handle, $this->meta['maxLenBlockCities']));
+            $list[] =
+            array_combine([
+                            'country',
+                            'city',
+                            'region',
+                            'district',
+                            'latitude',
+                            'longitude',
+                        ], explode(chr(0), $bufer));
+        }
+        
+        return $list;
+    }
+
+
+    
     
     /**
      * Поиск блока с информацией о ГЕО
