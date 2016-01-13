@@ -30,7 +30,7 @@ Usage
 ```php
 require_once 'Util/IpGeoBaseUtil.php';
 
-use cimus\IpGeoBase\Util\IpGeoBaseUtil;
+use Cimus\IpGeoBase\Util\IpGeoBaseUtil;
 
 $path = __DIR__ . '/DB';
 $util = new IpGeoBaseUtil();
@@ -47,7 +47,7 @@ $util->convertInBinary($path);
 ```php
 require_once 'IpGeoBase.php';
 
-use cimus\IpGeoBase\IpGeoBase;
+use Cimus\IpGeoBase\IpGeoBase;
 
 $path = __DIR__ . '/DB';
 $search = new IpGeoBase($path);
