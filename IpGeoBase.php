@@ -197,7 +197,7 @@ class IpGeoBase
         $block = [];
         $t = [];
         for($i = 0; $i < 8; $i++){
-            $t[] = ord($bufer{$i});
+            $t[] = ord($bufer[$i]);
             if(count($t) == 4){
                 $block[] = ip2long(implode('.', $t));
                 $t = [];
